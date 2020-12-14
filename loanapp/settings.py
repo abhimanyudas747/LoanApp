@@ -94,14 +94,25 @@ WSGI_APPLICATION = 'loanapp.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'LoanApplications',
+#         'USER': 'djangouser',
+#         'PASSWORD': 'password',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'LoanApplications',
-        'USER': 'djangouser',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd6ci9v7sfh72bd',
+        'USER': 'vyregwyawclojb',
+        'PASSWORD': '0c446b955f67e605368bc49405d75a5ec4ba1984b1ec6afd4bf4ed5c9c072eb3',
+        'HOST': 'ec2-3-216-129-140.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
