@@ -1,0 +1,4 @@
+.centeredcol{
+    display: flex;
+    justify-content: center;
+}

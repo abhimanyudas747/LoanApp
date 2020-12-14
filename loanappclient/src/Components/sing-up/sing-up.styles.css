@@ -1,0 +1,20 @@
+.sign-up{
+    width: 35rem;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    font-family: "Open Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+
+.form-heading{
+    font-family: "Fira Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 42px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}

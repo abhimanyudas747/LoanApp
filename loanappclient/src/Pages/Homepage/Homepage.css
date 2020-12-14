@@ -1,0 +1,106 @@
+.flex-container{
+    display: flex;
+    
+    align-items: center;
+    
+    justify-content: center;
+}
+
+
+.form{
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.tagline{
+    padding: 10px;
+    background-color: rgba(0,0,0,0.5);
+    width: 25rem;
+}
+
+
+.sign-up-form{
+    display: flex;
+    height: 80vh;
+    width: 100vh;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blue; */
+}
+
+
+.heading{
+    font-family: "Fira Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 56px;
+    color: aliceblue;
+}
+
+.tag-text{
+    font-family:  "Open Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    color: aliceblue;
+    margin-top: 30px;
+}
+
+.main-ctr{
+    background-image: url("../../background.jpg");
+    height: 90vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+.bottom-ctr{
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.bottom-head{
+    text-align: center;
+    font-family: "Fira Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 42px;
+    color: rgb(37, 37, 37);
+    margin-top: 4rem;
+}
+
+.bottom-desc{
+    text-align: center;
+    margin-top: 1rem;
+    font-family: "Open Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: rgb(139, 139, 139);
+}
+
+.step-ctr{
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 0px 0 rgba(0, 0, 0, 0.2);
+}
+
+.steplist{
+    padding-top: 4rem;
+}
+
+.step-head{
+    font-family: "Fira Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+    font-size: 20px;
+    font-weight: 1000;
+    line-height: 26px;
+    color: rgb(37, 37, 37);
+}
+
+.step-desc{
+    font-family: "Open Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: rgb(70, 70, 70);
+}

@@ -1,0 +1,13 @@
+.heading-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.form-flex{
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    
+}
