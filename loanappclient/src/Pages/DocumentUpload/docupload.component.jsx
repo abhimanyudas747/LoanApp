@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container,Input, Alert, Nav, NavDropdown, Row, Col, Form, Button, Table, DropdownButton, Dropdown} from 'react-bootstrap'
+import {Container,Row, Col, Form, Button} from 'react-bootstrap'
 import {browserHistory} from 'react-router'
 
 class DocUpload extends React.Component{
@@ -11,14 +11,13 @@ class DocUpload extends React.Component{
             photo: ""
         }
 
-        this.savedetails = this.savedetails.bind(this);
+        this.saveDetails = this.saveDetails.bind(this);
         this.handleChange = this.handleChange.bind(this);
     
     }
 
 
-    savedetails = async(e) =>
-    {
+    saveDetails = async() => {
         console.log(this.state)
         var uploadData = new FormData();
         uploadData.append('AppID', this.props.AppID);
@@ -95,7 +94,7 @@ class DocUpload extends React.Component{
 
                 <Row >
                     <Col style={{paddingTop: "35px", textAlign: "center"}} sm="12">
-                        <Button type="button" onClick={this.savedetails}>NEXT</Button>
+                        <Button type="button" onClick={this.saveDetails}>NEXT</Button>
                     </Col>
                 </Row>
                 
