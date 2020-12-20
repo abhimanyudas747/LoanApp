@@ -1,3 +1,4 @@
+/* eslint eqeqeq: 0 */
 import React from 'react'
 import {Container, Button, Row, Col, Form} from 'react-bootstrap'
 import './Asset-details.styles.css'

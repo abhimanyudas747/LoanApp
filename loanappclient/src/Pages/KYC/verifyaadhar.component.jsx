@@ -1,3 +1,4 @@
+/* eslint eqeqeq: 0 */
 import React from 'react'
 import {Modal, Button, Form, Col} from 'react-bootstrap'
 
