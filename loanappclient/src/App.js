@@ -34,7 +34,7 @@ class App extends React.Component{
       loantype: "",
       AppID: "",
       verified: false,
-      api: "https://loanapp2.herokuapp.com"
+      api: "http://127.0.0.1:8000"
     };
 
     
@@ -94,6 +94,7 @@ class App extends React.Component{
     this.setState({
       verified: true
     })
+    
   }
 
   setloantype = (loantype) =>

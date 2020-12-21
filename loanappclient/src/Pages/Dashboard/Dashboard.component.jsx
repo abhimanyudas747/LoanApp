@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container, Nav, NavDropdown, Row, Col, Form, Button, Table} from 'react-bootstrap'
 import './Dashboard.styles.css'
-import NewAppForm from '../../Components/NewAppForm/NewAppForm.component'
+
 import {browserHistory} from 'react-router'
 
 
@@ -77,6 +77,7 @@ class Dashboard extends React.Component{
         //     data => this.setState({apps: data['Record']})
         // )
         this.refresh()
+        document.title = "Your Dashboard"
     }
 
 
@@ -146,7 +147,7 @@ class Dashboard extends React.Component{
                 
             </Container>
 
-            <NewAppForm show={this.state.showmodal} close={this.closemodal} user={this.props.User} refresh={this.refresh}  />
+            
             </>
         )
     }

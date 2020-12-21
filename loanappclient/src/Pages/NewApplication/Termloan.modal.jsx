@@ -84,6 +84,12 @@ const handleChange = (e) => {
 }
 
 const handleSubmit = (e) => {
+    e.preventDefault()
+    if(propdetails == "" || addr == "" || val == 0){
+        alert("Please enter all values")
+        return
+    }
+
     const obj = {
         propdetails: propdetails,
         addr: addr,
@@ -103,7 +109,7 @@ return (
         <Modal.Title>House Building Loan</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <Form>
+        <Form onSubmit={handleSubmit}>
         <Form.Group>
         <Form.Label>Property Details</Form.Label>
         <Form.Control onChange={handleChange} name="propdetails" as="textarea" rows="3" />
@@ -173,6 +179,11 @@ const handleChange = (e) => {
 }
 
 const handleSubmit = (e) => {
+    e.preventDefault()
+    if(val == 0 || dname == ""){
+        alert("Please enter all values")
+        return
+    }
     const obj = {
         dname: dname,
         val: val,
@@ -192,7 +203,7 @@ return (
         <Modal.Title>Vehicle Loan</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <Form>
+        <Form onSubmit={handleSubmit}>
         <Form.Group>
             <Form.Label>Dealer's Name</Form.Label>
             <Form.Control name="dname" onChange={handleChange} type="text" />

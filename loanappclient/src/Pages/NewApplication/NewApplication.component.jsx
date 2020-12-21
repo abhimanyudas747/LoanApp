@@ -14,7 +14,7 @@ class NewApplication extends React.Component{
             duration: 0,
             loanamt: 0,
             installment: 0,
-            frequency: "",
+            frequency: 1,
             showterm: false,
             showhb: false,
             showvh: false,
@@ -39,7 +39,17 @@ class NewApplication extends React.Component{
 
     handleSubmit = async(e) =>
     {
-         await fetch(this.props.api+'/new_app', {
+        if(this.state.duration == 0){
+            alert("Please enter loan duration")
+            return
+        }
+        if(this.state.loanamt == 0){
+            alert("Loan amount cannot be zero")
+            return
+        }
+
+
+        await fetch(this.props.api+'/new_app', {
                                                 method: 'post',
                                                 headers: {
                                                     "Content-Type": "application/x-www-form-urlencoded",
@@ -191,10 +201,11 @@ class NewApplication extends React.Component{
                             onChange={this.showmodal}
                             name="loantype"
                         >
-                            <option value="0">Choose...</option>
+                            
+                            <option value="showpers">Personal Loan</option>
                             <option value="showterm">Term Loan</option>
                             <option value="showhb">HB Loan</option>
-                            <option value="showpers">Personal Loan</option>
+                            
                             <option value="showvh">Vehicle Loan</option>
                         </Form.Control>
                         </Col>
@@ -263,7 +274,7 @@ class NewApplication extends React.Component{
                             custom
                             onChange={this.handleChange}
                         >
-                            <option value="0">Choose...</option>
+                            {/* <option value="0">Choose...</option> */}
                             <option value="1">Monthly</option>
                             <option value="4">Quarterly</option>
                             <option value="6">Half Yearly</option>

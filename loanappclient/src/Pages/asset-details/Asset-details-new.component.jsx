@@ -42,6 +42,10 @@ export const Typea = (props) => {
     }
 
     const handleSubmit = async(e) => {
+        e.preventDefault()
+        if(reason == ""){
+            alert("Please enter reason")
+        }
         await fetch(props.api+'/add_typea', {
                                                 method: 'post',
                                                 headers: {
@@ -212,6 +216,11 @@ export const Typeb = (props) => {
     }
 
     const handleSubmit = async(e) => {
+        e.preventDefault()
+        if(reason == ""){
+            alert("Please enter reason")
+            return
+        }
         await fetch(props.api+'/add_typeb', {
                                                 method: 'post',
                                                 headers: {

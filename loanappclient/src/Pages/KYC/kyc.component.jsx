@@ -42,6 +42,7 @@ class Kyc extends React.Component{
         this.verifypan = this.verifypan.bind(this);
         this.savedetails = this.savedetails.bind(this);
         this.fetchdetails = this.fetchdetails.bind(this);
+        document.title = "KYC Process"
     }
 
     fetchdetails = () => {
@@ -95,8 +96,9 @@ class Kyc extends React.Component{
         //push(summary) if aadharverified else push(documentupload)
         if(this.state.isadharverified == true)
         {
+            await this.props.setverified();
             browserHistory.push('/summary');
-            this.props.setverified();
+            
 
         }
         else{
@@ -108,6 +110,11 @@ class Kyc extends React.Component{
     verifypan = (e) =>
     {
         e.preventDefault();
+        if(this.state.pan == "")
+        {
+            alert("Please enter PAN")
+            return
+        }
         this.setState({
             fetched: true
         })
@@ -132,6 +139,11 @@ class Kyc extends React.Component{
     verifyaadhaar = (e) =>
     {
         e.preventDefault();
+        if(this.state.aadhaar == "")
+        {
+            alert("Please enter Aadhaar number")
+            return
+        }
         this.setState({
             showmodal: true
         })
@@ -148,6 +160,11 @@ class Kyc extends React.Component{
     verifypassport = (e) =>
     {
         e.preventDefault()
+        if(this.state.passport == "")
+        {
+            alert("Please enter Passport number")
+            return
+        }
         this.setState({
             fetched: true
         })
@@ -182,7 +199,7 @@ class Kyc extends React.Component{
             <Row>
                 <Col style={{textAlign: "center"}} sm={12}>
                 <Alert variant="warning">
-                    DISCLAIMER: Customers can verify themselves using Aadhaar, PAN or Passport number. Using Aadhaar is recommended for easy verification. *PAN is mandatory for verification.
+                    DISCLAIMER: Customers can verify themselves using Aadhaar, PAN or Passport number. Using Aadhaar is recommended for easy verification.
                 </Alert>
                 </Col>
             </Row>

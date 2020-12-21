@@ -16,7 +16,7 @@ const VerifyAadhar = (props) => {
             props.verified();
         }
         else{
-            alert("Incorrect OTP")
+            alert("Incorrect OTP. Correct OTP is 12345.")
         }
     }
   

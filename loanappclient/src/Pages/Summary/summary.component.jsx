@@ -101,6 +101,7 @@ class Summary extends React.Component{
         // )
         
         console.log("mounted")
+        document.title = "Application Summary"
 
     }
 
@@ -205,7 +206,7 @@ class Summary extends React.Component{
                             ))
                         }
                     </Form.Group>
-                    <Form.Group as={Row} controlId="summarygroup2">
+                    <Form.Group hidden={this.props.verified} as={Row} controlId="summarygroup2">
                         <Form.Label column sm="2">
                         Address Proof:
                         </Form.Label>

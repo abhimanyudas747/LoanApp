@@ -99,7 +99,10 @@ def add_user(request):
 def signup(request):
     if request.method == "POST":
         params = dict(request.POST)
-        myuser = User.objects.create_user(params['uid'][0], params['email'][0],params['password'][0])
+        try:
+            myuser = User.objects.create_user(params['uid'][0], params['email'][0],params['password'][0])
+        except:
+            return JsonResponse({"Status": "ERR_USR_CREATION_FAILED"})
         tok = Token.objects.get_or_create(user=myuser)
         return JsonResponse({"Status": "OK", "Token": tok[0].key, "User": params['uid'][0]})
     else:

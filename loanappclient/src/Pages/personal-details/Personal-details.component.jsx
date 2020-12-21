@@ -32,6 +32,7 @@ class Pdetails extends React.Component
             }
         })
         console.log("mounted")
+        document.title = "New User"
     }
 
     getCurrentDate(separator=''){

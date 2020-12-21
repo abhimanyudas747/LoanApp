@@ -8,11 +8,12 @@ class DocUpload extends React.Component{
         super(props)
         this.state = {
             addressproof: "",
-            photo: ""
+            photo: "",
         }
 
         this.savedetails = this.savedetails.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        document.title = "Upload Documents"
     
     }
 
@@ -20,6 +21,15 @@ class DocUpload extends React.Component{
     savedetails = async(e) =>
     {
         console.log(this.state)
+        if(this.state.addressproof == ""){
+            alert("Please upload address proof")
+            return
+        }
+        if(this.state.photo == ""){
+            alert("Please upload photo")
+            return
+        }
+
         var uploadData = new FormData();
         uploadData.append('AppID', this.props.AppID);
         uploadData.append('Type', 'addr')
@@ -42,6 +52,22 @@ class DocUpload extends React.Component{
 
     handleChange = (e) =>
     {
+        let ext = e.target.value.match(/\.([^\.]+)$/)[1];
+        switch (ext) {
+            case 'jpg':
+            case 'bmp':
+            case 'png':
+            case 'tif':
+            case 'jpeg':
+                break;
+            default:
+                alert('File type not allowed');
+                e.target.value = ""
+                this.setState({
+                    [e.target.id]: ""
+                })
+                return
+        }
         this.setState({
             [e.target.id]: e.target.files[0]
         })
@@ -72,7 +98,7 @@ class DocUpload extends React.Component{
                         id="addressproof"
                         label={this.state.addressproof}
                         onChange={this.handleChange}
-                        custom
+                        accept="image/*"
                     />
                     
                     </Form >
@@ -87,7 +113,7 @@ class DocUpload extends React.Component{
                         type="file"
                         label={this.state.photo}
                         onChange={this.handleChange}
-                        custom
+                        accept="image/*"
                     />
                     </Form>
                     </Col>
