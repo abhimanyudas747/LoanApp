@@ -34,7 +34,7 @@ class App extends React.Component{
       loantype: "",
       AppID: "",
       verified: false,
-      api: "http://127.0.0.1:8000"
+      api: "https://loanapp2.herokuapp.com"
     };
 
     
