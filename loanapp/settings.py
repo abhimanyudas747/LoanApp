@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -84,24 +87,16 @@ TEMPLATES = [
 WSGI_APPLICATION = 'loanapp.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
+#Enter your database credentials here
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'LoanApplications',
-        'USER': 'djangouser',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': os.getenv('dbENGINE'),
+        'NAME': os.getenv('dbNAME'),
+        'USER': os.getenv('dbUSER'),
+        'PASSWORD': os.getenv('dbPASSWORD'),
+        'HOST': os.getenv('dbHOST'),
+        'PORT': os.getenv('dbPORT'),
     }
 }
 

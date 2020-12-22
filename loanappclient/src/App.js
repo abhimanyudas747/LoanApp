@@ -34,7 +34,7 @@ class App extends React.Component{
       loantype: "",
       AppID: "",
       verified: false,
-      api: "https://loanapp2.herokuapp.com"
+      api: process.env.REACT_APP_API //enter backend api root url here
     };
 
     
