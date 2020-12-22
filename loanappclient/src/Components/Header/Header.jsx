@@ -88,9 +88,9 @@ class Header extends React.Component{
                     <Nav.Link href="#features">How It Works</Nav.Link>
                     <Nav.Link href="#pricing">Pricing</Nav.Link>
                     <NavDropdown title="More" id="collasible-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">About</NavDropdown.Item>
+                    <NavDropdown.Item href="https://github.com/abhimanyudas747/LoanApp/blob/master/README.md">About</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">See Source</NavDropdown.Item>
+                    <NavDropdown.Item href="https://github.com/abhimanyudas747/LoanApp">See Source</NavDropdown.Item>
                 </NavDropdown>
                 </Nav>
                 <Nav>

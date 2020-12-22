@@ -8,7 +8,7 @@ import './Homepage.css'
 
 const Homepage = (props) =>
 {
-    document.title = "Welcome To LoanAPP. Loans made easy."
+    document.title = "Welcome To LoanApp. Loans Made Easy."
     if(props.user !== '')
     {
         browserHistory.push("/Pdetails")
